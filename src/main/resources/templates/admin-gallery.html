@@ -14,6 +14,10 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" type="text/css" href="common/layui/css/layui.css" media="all">
+  <link rel="stylesheet" type="text/css" href="common/bootstrap/css/bootstrap.css" media="all">
+  <link rel="stylesheet" type="text/css" href="common/global.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/personal.css" media="all">
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -85,118 +89,103 @@
 
   <!-- content start -->
   <div class="admin-content">
+    <section class="layui-larry-box">
+      <div class="larry-personal">
+        <header class="larry-personal-tit">
+          <span>修改密码</span>
+        </header><!-- /header -->
+        <div class="larry-personal-body clearfix changepwd">
+          <form class="layui-form col-lg-4" method="post" action="">
+            <div class="layui-form-item">
+              <label class="layui-form-label">用户名</label>
+              <div class="layui-input-block">
+                <input type="text" name="title"  autocomplete="off"  class="layui-input layui-disabled" value="admin" disabled="disabled" >
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">旧密码</label>
+              <div class="layui-input-block">
+                <input type="password" name="title"  autocomplete="off"  class="layui-input" value="" placeholder="请输入旧密码" id="password1">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">新密码</label>
+              <div class="layui-input-block">
+                <input type="password" name="title"  autocomplete="off"  class="layui-input" value="" placeholder="请输入新密码" id="password2">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">确认密码</label>
+              <div class="layui-input-block">
+                <input type="password" name="title"  autocomplete="off"  class="layui-input" value="" placeholder="请输入确认新密码" id="password3">
+              </div>
+            </div>
+            <div class="layui-form-item change-submit">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1" id="tj">提交</button>
 
-    <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">相册</strong> / <small>Gallery</small></div>
-    </div>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
 
-    <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-6 am-margin gallery-list">
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
-          <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
-          <div class="gallery-title">君可见漫天落霞</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg" alt=""/>
-          <div class="gallery-title">此刻鲜花满天幸福在身边</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg" alt=""/>
-          <div class="gallery-title">你当我是浮夸吧</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
-          <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
-          <div class="gallery-title">斜阳染幽草 几度飞红</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
-          <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
-          <div class="gallery-title">你当我是浮夸吧</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg" alt=""/>
-          <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
-          <div class="gallery-title">君可见漫天落霞</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
-          <div class="gallery-title">你当我是浮夸吧</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
-          <div class="gallery-title">君可见漫天落霞</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
-          <div class="gallery-title">斜阳染幽草 几度飞红</div>
-          <div class="gallery-desc">2375-09-26</div>
-        </a>
-      </li>
-    </ul>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="common/layui/lay/dest/layui.all.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="jsplug/jparticle.jquery.js"></script>
+    <script type="text/javascript" src="common/layui/layui.js"></script>
+    <script type="text/javascript">
+      layui.use(['form','upload'],function(){
+        var form = layui.form();
+      });
+      jQuery(document).ready(function () {
+        $("#tj").on("click",function () {
+          var password1 = $("#password1").val();
+          var password2 = $("#password2").val();
+          var password3 = $("#password3").val();
+          if (password3=="" ||password2=="" ||password1=="") {
+            alert("不能为空");
+            return false;
+          }else if (password2!=password3) {
+            alert("两次密码不一致");
+            return false;
+          }else if (password1==password2) {
+            alert("不能与原密码相同");
+            return false;
+          }
+          $.ajax({
+            type:"POST",
+            contentType:"application/x-www-form-urlencoded",
+            url:"http://localhost:8080/changepwd",
+            data:{
+              "managementPass":$("#password1").val(),
+              "password":$("#password2").val(),
+            },
+            xhrFields:{withCredentials:true},
+            success:function (data) {
 
-    <div class="am-margin am-cf">
-      <hr/>
-      <p class="am-fl">共 15 条记录</p>
-      <ol class="am-pagination am-fr">
-        <li class="am-disabled"><a href="#">&laquo;</a></li>
-        <li class="am-active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ol>
-    </div>
+              if(data.status=="success"){
+                alert("已更改！");
+                document.getElementById("password1").value="";
+                document.getElementById("password2").value="";
+                document.getElementById("password3").value="";
+              }
+              else{
+                alert(data.data.errMsg);
+              }
+            },
+            error:function (data) {
+              alert(managementPass);
+              alert("发送失败"+data.responseText);
+            }
+          });
+
+          return false;
+        });
+
+      });
+    </script>
 
   </div>
   <!-- content end -->
