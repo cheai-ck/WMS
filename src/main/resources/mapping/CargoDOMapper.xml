@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcg.dao.CargoDOMapper">
+  <resultMap id="BaseResultMap" type="com.wcg.dataobject.CargoDO">
+    <id column="cargo_id" jdbcType="INTEGER" property="cargoId" />
+    <result column="cargo_name" jdbcType="VARCHAR" property="cargoName" />
+    <result column="cargo_description" jdbcType="VARCHAR" property="cargoDescription" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="purchasing_cost" jdbcType="DECIMAL" property="purchasingCost" />
+    <result column="vip_price" jdbcType="DECIMAL" property="vipPrice" />
+    <result column="retail_price" jdbcType="DECIMAL" property="retailPrice" />
+    <result column="cargo_img_add" jdbcType="VARCHAR" property="cargoImgAdd"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    cargo_id, cargo_name, cargo_description, weight, purchasing_cost, vip_price, retail_price,cargo_img_add
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cargo
+    where cargo_id = #{cargoId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from cargo
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cargo
+    where cargo_id = #{cargoId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wcg.dataobject.CargoDO">
+    insert into cargo (cargo_id, cargo_name, cargo_description, 
+      weight, purchasing_cost, vip_price, 
+      retail_price,cargo_img_add)
+    values (#{cargoId,jdbcType=INTEGER}, #{cargoName,jdbcType=VARCHAR}, #{cargoDescription,jdbcType=VARCHAR}, 
+      #{weight,jdbcType=INTEGER}, #{purchasingCost,jdbcType=DECIMAL}, #{vipPrice,jdbcType=DECIMAL}, 
+      #{retailPrice,jdbcType=DECIMAL},#{cargoImgAdd,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wcg.dataobject.CargoDO">
+    insert into cargo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cargoId != null">
+        cargo_id,
+      </if>
+      <if test="cargoName != null">
+        cargo_name,
+      </if>
+      <if test="cargoDescription != null">
+        cargo_description,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+      <if test="purchasingCost != null">
+        purchasing_cost,
+      </if>
+      <if test="vipPrice != null">
+        vip_price,
+      </if>
+      <if test="retailPrice != null">
+        retail_price,
+      </if>
+      <if test="cargoImgAdd != null">
+        cargo_img_add
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cargoId != null">
+        #{cargoId,jdbcType=INTEGER},
+      </if>
+      <if test="cargoName != null">
+        #{cargoName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoDescription != null">
+        #{cargoDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="purchasingCost != null">
+        #{purchasingCost,jdbcType=DECIMAL},
+      </if>
+      <if test="vipPrice != null">
+        #{vipPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="retailPrice != null">
+        #{retailPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="cargoImgAdd != null">
+        #{cargoImgAdd,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wcg.dataobject.CargoDO">
+    update cargo
+    <set>
+      <if test="cargoName != null">
+        cargo_name = #{cargoName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoDescription != null">
+        cargo_description = #{cargoDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="purchasingCost != null">
+        purchasing_cost = #{purchasingCost,jdbcType=DECIMAL},
+      </if>
+      <if test="vipPrice != null">
+        vip_price = #{vipPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="retailPrice != null">
+        retail_price = #{retailPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="cargoImgAdd != null">
+        #{cargoImgAdd,jdbcType=VARCHAR}
+      </if>
+    </set>
+    where cargo_id = #{cargoId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wcg.dataobject.CargoDO">
+    update cargo
+    set cargo_name = #{cargoName,jdbcType=VARCHAR},
+      cargo_description = #{cargoDescription,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=INTEGER},
+      purchasing_cost = #{purchasingCost,jdbcType=DECIMAL},
+      vip_price = #{vipPrice,jdbcType=DECIMAL},
+      retail_price = #{retailPrice,jdbcType=DECIMAL},
+      cargo_img_add = #{cargoImgAdd,jdbcType=VARCHAR}
+    where cargo_id = #{cargoId,jdbcType=INTEGER}
+  </update>
+</mapper>

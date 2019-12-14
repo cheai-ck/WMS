@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+            <!--去掉时间戳以及注释-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!--jdbc连接配置-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/wms"
+                        userId="root" password="123456">
+
+        </jdbcConnection>
+        <!--数据库对应实体类配置-->
+        <javaModelGenerator targetPackage="com.wcg.dataobject" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+           <property name="trimStrings" value="true"/>   <!--去掉空格-->
+
+        </javaModelGenerator>
+    <!--mapper.xml配置-->
+        <sqlMapGenerator targetPackage="mapping" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+    <!--mapper配置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wcg.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"></property>
+        </javaClientGenerator>
+    <!-- 数据库表转化为实体类，可以写多个table一次转完，也可以运行一次后修改tableName domainObjectName继续运行Mybatis-generator-->
+        <table tableName="order_wms" domainObjectName="OrderDO"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+
+
+
+
+</context>
+
+</generatorConfiguration>
