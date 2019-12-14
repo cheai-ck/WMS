@@ -232,4 +232,8 @@ public String outOrder(@RequestBody OrderDO order){
  return mv;
 }
 
+@RequestMapping("inde")
+ public String indd(){
+ return "admin-index";
+}
 }
