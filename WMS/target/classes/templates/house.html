@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<ol>
+
+    <table border="1">
+        <tr>
+
+            <th>货物</th>
+            <th>供货商</th>
+            <th>库存</th>
+            <th>更新时间</th>
+            <th>状态</th>
+            <th>操作</th>
+
+        </tr>
+        <tr  th:each="house: ${houseList}">
+            <td th:text="${house.cName}"></td>
+            <td th:text="${house.sName}"></td>
+            <td th:text="${house.amount}"></td>
+       <!--<td th:text="${sj}"></td>-->
+            <td th:text="${house.upDate}"></td>
+            <td th:text="${house.state}"></td>
+            <span th:if="${house.state!='已出库'}">
+            <td><a th:href="@{/out(houseid=${house.houseId})}">出库</a></td>
+                </span>
+        </tr>
+    </table>
+</ol>
+</body>
+</html>

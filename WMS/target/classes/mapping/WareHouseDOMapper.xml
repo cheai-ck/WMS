@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcg.dao.WareHouseDOMapper">
+  <resultMap id="BaseResultMap" type="com.wcg.dataobject.WareHouseDO">
+    <id column="house_id" jdbcType="INTEGER" property="houseId" />
+    <result column="c_name" jdbcType="VARCHAR" property="cName" />
+    <result column="s_name" jdbcType="VARCHAR" property="sName" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="up_date" jdbcType="TIMESTAMP" property="upDate" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    house_id, c_name, s_name, amount, up_date, state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouse
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from warehouse
+  </select>
+
+  <select id="selectcs" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from warehouse
+    where c_name = #{cName,jdbcType=INTEGER} AND s_name = #{sName,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from warehouse
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wcg.dataobject.WareHouseDO">
+    insert into warehouse (house_id, c_name, s_name, 
+      amount, up_date, state
+      )
+    values (#{houseId,jdbcType=INTEGER}, #{cName,jdbcType=VARCHAR}, #{sName,jdbcType=VARCHAR}, 
+      #{amount,jdbcType=INTEGER}, #{upDate,jdbcType=TIMESTAMP}, #{state,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wcg.dataobject.WareHouseDO">
+    insert into warehouse
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="houseId != null">
+        house_id,
+      </if>
+      <if test="cName != null">
+        c_name,
+      </if>
+      <if test="sName != null">
+        s_name,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="upDate != null">
+        up_date,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="houseId != null">
+        #{houseId,jdbcType=INTEGER},
+      </if>
+      <if test="cName != null">
+        #{cName,jdbcType=VARCHAR},
+      </if>
+      <if test="sName != null">
+        #{sName,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="upDate != null">
+        #{upDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wcg.dataobject.WareHouseDO">
+    update warehouse
+    <set>
+      <if test="cName != null">
+        c_name = #{cName,jdbcType=VARCHAR},
+      </if>
+      <if test="sName != null">
+        s_name = #{sName,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="upDate != null">
+        up_date = #{upDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wcg.dataobject.WareHouseDO">
+    update warehouse
+    set c_name = #{cName,jdbcType=VARCHAR},
+      s_name = #{sName,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=INTEGER},
+      up_date = #{upDate,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=VARCHAR}
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </update>
+</mapper>

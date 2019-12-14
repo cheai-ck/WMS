@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcg.dao.SupplierDOMapper">
+  <resultMap id="BaseResultMap" type="com.wcg.dataobject.SupplierDO">
+    <id column="SUPPLIER_ID" jdbcType="INTEGER" property="supplierId" />
+    <result column="SUPPLIER_NAME" jdbcType="VARCHAR" property="supplierName" />
+    <result column="SUPPLIER_PERSON" jdbcType="VARCHAR" property="supplierPerson" />
+    <result column="SUPPLIER_TEL" jdbcType="VARCHAR" property="supplierTel" />
+    <result column="SUPPLIER_EMAIL" jdbcType="VARCHAR" property="supplierEmail" />
+    <result column="SUPPLIER_ADDRESS" jdbcType="VARCHAR" property="supplierAddress" />
+    <result column="SUPPLIER_CREATEDATE" jdbcType="DATE" property="supplierCreatedate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    SUPPLIER_ID, SUPPLIER_NAME, SUPPLIER_PERSON, SUPPLIER_TEL, SUPPLIER_EMAIL, SUPPLIER_ADDRESS, 
+    SUPPLIER_CREATEDATE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from supplier
+    where SUPPLIER_ID = #{supplierId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"  />
+    from supplier
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from supplier
+    where SUPPLIER_ID = #{supplierId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wcg.dataobject.SupplierDO">
+    insert into supplier (SUPPLIER_ID, SUPPLIER_NAME, SUPPLIER_PERSON, 
+      SUPPLIER_TEL, SUPPLIER_EMAIL, SUPPLIER_ADDRESS, 
+      SUPPLIER_CREATEDATE)
+    values (#{supplierId,jdbcType=INTEGER}, #{supplierName,jdbcType=VARCHAR}, #{supplierPerson,jdbcType=VARCHAR}, 
+      #{supplierTel,jdbcType=VARCHAR}, #{supplierEmail,jdbcType=VARCHAR}, #{supplierAddress,jdbcType=VARCHAR}, 
+      #{supplierCreatedate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wcg.dataobject.SupplierDO">
+    insert into supplier
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        SUPPLIER_ID,
+      </if>
+      <if test="supplierName != null">
+        SUPPLIER_NAME,
+      </if>
+      <if test="supplierPerson != null">
+        SUPPLIER_PERSON,
+      </if>
+      <if test="supplierTel != null">
+        SUPPLIER_TEL,
+      </if>
+      <if test="supplierEmail != null">
+        SUPPLIER_EMAIL,
+      </if>
+      <if test="supplierAddress != null">
+        SUPPLIER_ADDRESS,
+      </if>
+      <if test="supplierCreatedate != null">
+        SUPPLIER_CREATEDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="supplierName != null">
+        #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPerson != null">
+        #{supplierPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierTel != null">
+        #{supplierTel,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierEmail != null">
+        #{supplierEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCreatedate != null">
+        #{supplierCreatedate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wcg.dataobject.SupplierDO">
+    update supplier
+    <set>
+      <if test="supplierName != null">
+        SUPPLIER_NAME = #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPerson != null">
+        SUPPLIER_PERSON = #{supplierPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierTel != null">
+        SUPPLIER_TEL = #{supplierTel,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierEmail != null">
+        SUPPLIER_EMAIL = #{supplierEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        SUPPLIER_ADDRESS = #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCreatedate != null">
+        SUPPLIER_CREATEDATE = #{supplierCreatedate,jdbcType=DATE},
+      </if>
+    </set>
+    where SUPPLIER_ID = #{supplierId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wcg.dataobject.SupplierDO">
+    update supplier
+    set SUPPLIER_NAME = #{supplierName,jdbcType=VARCHAR},
+      SUPPLIER_PERSON = #{supplierPerson,jdbcType=VARCHAR},
+      SUPPLIER_TEL = #{supplierTel,jdbcType=VARCHAR},
+      SUPPLIER_EMAIL = #{supplierEmail,jdbcType=VARCHAR},
+      SUPPLIER_ADDRESS = #{supplierAddress,jdbcType=VARCHAR},
+      SUPPLIER_CREATEDATE = #{supplierCreatedate,jdbcType=DATE}
+    where SUPPLIER_ID = #{supplierId,jdbcType=INTEGER}
+  </update>
+</mapper>

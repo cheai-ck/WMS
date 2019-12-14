@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>货物入库</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="cx()" value="查询数据库"><br/>
+    <p><b>供应商:</b></p>
+    <select id="sup">
+        <option onclick="" th:each="supplier:${supplierList}" th:value="${supplier.supplierName}" th:text="${supplier.supplierName}"></option>
+    </select>
+    <b>入库货物:</b>
+    <select id="ent">
+        <option th:each="cargo:${cargoList}" th:value="${cargo.cargoName}" th:text="${cargo.cargoName}"></option>
+    </select>
+    <p><b>数量:</b><input type="text" id="amount"></p>
+    <p>&nbsp;<input type="button" id="enter" value="提交入库"></p>
+</form>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+ function cx() {
+     location.href="selectSupplier";
+ }
+</script>
+<script type="text/javascript">
+
+   $("#enter").click(function () {
+       var sup = $("#sup option:selected").val();
+       var ent = $("#ent option:selected").val();
+       var n = $("#amount").val();
+       if (isNaN(n)||n==""){
+           alert("请输入数字!");
+           return;
+       }
+       var obj = JSON.stringify({"cName":ent,"sName":sup,"amount":n});
+       $.ajax(
+           {
+               url:"enter",
+               type:"post",
+               data:obj,
+               contentType:"application/json;charsetset=UTF-8",
+               success:function (data) {
+                   if (data=="success"){
+                       alert("已入库！");
+                       location.href="house";
+                   }else {
+                       alert("失败！");
+                   }
+               }
+
+           }
+       )
+   })
+</script>
+</body>
+</html>
