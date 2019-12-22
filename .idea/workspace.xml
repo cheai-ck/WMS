@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="更新了">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +21,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -40,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/wcg/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,11 +66,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\management\WMS\src\main\resources\templates" />
       <recent name="F:\management\WMS\src\main\java\com\wcg\controller" />
       <recent name="F:\management\WMS\src\main\java\com\wcg\service\impl" />
       <recent name="F:\management\WMS\src\main\java\com\wcg\service" />
       <recent name="F:\management\WMS\src\main\java\com\wcg\util" />
-      <recent name="F:\management\WMS\src\main\java\com\wcg" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,6 +152,7 @@
       <workItem from="1576498289995" duration="588000" />
       <workItem from="1576994524414" duration="1225000" />
       <workItem from="1576997061971" duration="718000" />
+      <workItem from="1576998912475" duration="7284000" />
     </task>
     <task id="LOCAL-00001" summary="更新了一个方法inx">
       <created>1576318161033</created>
