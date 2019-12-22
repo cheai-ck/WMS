@@ -1,18 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="">
+    <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="更新了">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/PhotoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/AdminDOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/AdminDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/error/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/error/CommonError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/error/EmBusinessError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/response/CommonReturnType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/util/Md5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/util/VerifyCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/AdminDOMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/bootstrap/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/pxgridsicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/pxgridsicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/pxgridsicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/font/pxgridsicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/laydate/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/laydate/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/html/chatlog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/html/find.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/html/getmsg.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/html/msgbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/layim.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/mobile/layim.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/skin/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/css/modules/layim/voice/default.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/dest/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/layim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/common/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/70%黑巧克力.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/verifyimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/夏威夷果.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/岩焗乳酪吐司手撕夹心小面包.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/整箱装早餐蛋糕.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/甜辣薄豆干.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/甜辣鸭舌.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/菲律宾芒果干.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/麻辣零食大礼包.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/larry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/larrycms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/navtab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/newsadd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/newslist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/json/table.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/jsplug/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/jsplug/jparticle.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-help.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-help.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-log.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,7 +226,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1Uy4ZXx7rxfPCaJKj49VjVeWHAc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -33,7 +238,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/wcg/controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,6 +248,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSP" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\management\WMS\src\main\java\com\wcg\controller" />
+      <recent name="F:\management\WMS\src\main\java\com\wcg\service\impl" />
+      <recent name="F:\management\WMS\src\main\java\com\wcg\service" />
+      <recent name="F:\management\WMS\src\main\java\com\wcg\util" />
+      <recent name="F:\management\WMS\src\main\java\com\wcg" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,53 +270,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="WMS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="WMS" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="WMS [mybatis-generator:generate]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="WMS" />
@@ -117,6 +309,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.WMS [mybatis-generator:generate]" />
+      <item itemvalue="Spring Boot.App" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.App" />
@@ -133,7 +329,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576315567019</updated>
-      <workItem from="1576315594003" duration="5905000" />
+      <workItem from="1576315594003" duration="8442000" />
+      <workItem from="1576410526981" duration="1148000" />
+      <workItem from="1576411982264" duration="1058000" />
+      <workItem from="1576413089268" duration="1300000" />
+      <workItem from="1576414557384" duration="2535000" />
+      <workItem from="1576498289995" duration="588000" />
+      <workItem from="1576994524414" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="更新了一个方法inx">
       <created>1576318161033</created>
@@ -142,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576318161033</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加了静态文件">
+      <created>1576323207662</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576323207662</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,14 +362,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="更新了一个方法inx" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了一个方法inx" />
+    <MESSAGE value="添加了静态文件" />
+    <MESSAGE value="更新了" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了" />
   </component>
 </project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcg.dao.AdminDOMapper">
+  <resultMap id="BaseResultMap" type="com.wcg.dataobject.AdminDO">
+    <id column="management_id" jdbcType="INTEGER" property="managementId" />
+    <result column="management_user" jdbcType="VARCHAR" property="managementUser" />
+    <result column="management_pass" jdbcType="VARCHAR" property="managementPass" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    management_id, management_user, management_pass
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from admin
+    where management_id = #{managementId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectLogin" parameterType="com.wcg.dataobject.AdminDO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from admin
+    where management_user = #{managementUser,jdbcType=VARCHAR} and management_pass = #{managementPass,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from admin
+    where management_id = #{managementId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wcg.dataobject.AdminDO">
+    insert into admin (management_id, management_user, management_pass
+      )
+    values (#{managementId,jdbcType=INTEGER}, #{managementUser,jdbcType=VARCHAR}, #{managementPass,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wcg.dataobject.AdminDO">
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="managementId != null">
+        management_id,
+      </if>
+      <if test="managementUser != null">
+        management_user,
+      </if>
+      <if test="managementPass != null">
+        management_pass,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="managementId != null">
+        #{managementId,jdbcType=INTEGER},
+      </if>
+      <if test="managementUser != null">
+        #{managementUser,jdbcType=VARCHAR},
+      </if>
+      <if test="managementPass != null">
+        #{managementPass,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wcg.dataobject.AdminDO">
+    update admin
+    <set>
+      <if test="managementUser != null">
+        management_user = #{managementUser,jdbcType=VARCHAR},
+      </if>
+      <if test="managementPass != null">
+        management_pass = #{managementPass,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where management_id = #{managementId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wcg.dataobject.AdminDO">
+    update admin
+    set management_user = #{managementUser,jdbcType=VARCHAR},
+      management_pass = #{managementPass,jdbcType=VARCHAR}
+    where management_id = #{managementId,jdbcType=INTEGER}
+  </update>
+
+  <update id="updatePass" parameterType="com.wcg.dataobject.AdminDO">
+    update admin
+    set management_pass = #{password,jdbcType=VARCHAR}
+    where management_user = #{managementUser,jdbcType=INTEGER}
+  </update>
+</mapper>
