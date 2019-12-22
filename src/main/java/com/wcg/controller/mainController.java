@@ -35,14 +35,21 @@ private WareHouseService wareHouseService;
   * 查询所有商品
   * @return
   */
- @RequestMapping("cargo")
+  @RequestMapping("cargo")
+@ResponseBody
+ public CommonReturnType ind(){
+  ModelAndView mv = new ModelAndView("cargo");
+  List<CargoDO> list = cargoService.selectAll();
+  return CommonReturnType.create(list);
+ }
+/* @RequestMapping("cargo")
  public ModelAndView ind(){
   ModelAndView mv = new ModelAndView("cargo");
   List<CargoDO> list = cargoService.selectAll();
   mv.addObject("cargolist",list);
   //request.getSession().setAttribute("cargoList",list);
   return mv;
- }
+ }*/
 
  /**
   * 跳转到商品入库页面

@@ -14,6 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/common/bootstrap/css/bootstrap.css">
 </head>
 <body>
 <header class="am-topbar admin-header">
@@ -48,17 +49,18 @@
     <ul class="am-list admin-sidebar-list">
       <li><a href="#"><span class="am-icon-home"></span> 首页</a></li>
       <li class="admin-parent">
-        <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+        <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 我的面板<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-          <li><a href="admin-user.html" class="am-cf"><span class="am-icon-check"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+          <li><a href="admin-user.html" class="am-cf"><span class="glyphicon glyphicon-user"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
           <li><a href="admin-help.html"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
-          <li><a href="admin-gallery"><span class="am-icon-th"></span> 修改密码<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
+          <li><a href="admin-gallery"><span class="glyphicon glyphicon-pencil"></span> 修改密码<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
           <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
           <li><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
         </ul>
       </li>
-      <li><a href="admin-table.html"><span class="am-icon-table"></span> 表格</a></li>
-      <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
+      <li><a href="admin-cargo"><span class="glyphicon glyphicon-shopping-cart"></span> 货物信息</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> 客户信息</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-home"></span> 仓库信息</a></li>
       <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
 

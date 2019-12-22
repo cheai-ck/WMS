@@ -32,4 +32,9 @@ public class SkipController {
   return "admin-help";
  }
 
+ @RequestMapping("admin-cargo")
+ public String cargo(){
+  return "admin-cargo";
+ }
+
 }
