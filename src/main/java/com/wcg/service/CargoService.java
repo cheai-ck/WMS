@@ -11,6 +11,8 @@ public interface CargoService {
 
  int insertSelective(CargoDO record);
 
+ List<CargoDO> selectName(String cargoName);
+
  List<CargoDO> selectAll();
 
  CargoDO selectByPrimaryKey(Integer cargoId);

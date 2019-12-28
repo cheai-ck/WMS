@@ -6,19 +6,17 @@ import com.wcg.error.EmBusinessError;
 import com.wcg.response.CommonReturnType;
 import com.wcg.service.*;
 import com.wcg.util.KeyUtil;
-import com.wcg.util.Md5;
-import org.apache.ibatis.annotations.Param;
+
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
-@Controller
-public class mainController {
+@RestController
+public class mainController extends BaseController {
  @Autowired
  private CargoService cargoService;
  @Autowired
@@ -27,29 +25,51 @@ public class mainController {
 private OrderService orderService;
 @Autowired
 private WareHouseService wareHouseService;
-@Autowired
-
-
 
  /**
   * 查询所有商品
   * @return
   */
   @RequestMapping("cargo")
-@ResponseBody
- public CommonReturnType ind(){
+ public CommonReturnType ind() throws BusinessException {
   ModelAndView mv = new ModelAndView("cargo");
   List<CargoDO> list = cargoService.selectAll();
+  if (list==null){
+   throw new BusinessException(EmBusinessError.CARGO_NOT_EXIST);
+  }
   return CommonReturnType.create(list);
  }
-/* @RequestMapping("cargo")
- public ModelAndView ind(){
-  ModelAndView mv = new ModelAndView("cargo");
-  List<CargoDO> list = cargoService.selectAll();
-  mv.addObject("cargolist",list);
-  //request.getSession().setAttribute("cargoList",list);
-  return mv;
- }*/
+
+
+ /**
+  * 按名字查询
+  * @return
+  */
+ @RequestMapping("cargoid")
+ public CommonReturnType indd(@RequestBody JSONObject obj) throws BusinessException {
+  String cargoName =obj.getString("cargoName");
+  List<CargoDO> list = cargoService.selectName(cargoName);
+  if (list.size()==0){
+   throw new BusinessException(EmBusinessError.CARGO_NOT_EXIST);
+  }
+  return CommonReturnType.create(list);
+ }
+
+
+ /**
+  * 按名字查询
+  * @return
+  */
+ @RequestMapping("selectsupplierName")
+ public CommonReturnType supplierName(@RequestBody JSONObject obj) throws BusinessException {
+  String supplierName =obj.getString("supplierName");
+  List<SupplierDO> list = supplierService.selectName(supplierName);
+  if (list.size()==0){
+   throw new BusinessException(EmBusinessError.SUPPLIER_NOT_EXIST);
+  }
+  return CommonReturnType.create(list);
+ }
+
 
  /**
   * 跳转到商品入库页面
@@ -85,6 +105,23 @@ private WareHouseService wareHouseService;
  }
 
  /**
+  * 查询供应商信息
+  * @return
+  */
+ @RequestMapping("supplier")
+ public CommonReturnType selectAll() throws BusinessException {
+  List<SupplierDO> list = supplierService.selectAll();
+ for (SupplierDO supplierDO:list){
+
+ }
+  System.out.println(list);
+  if (list.size()==0){
+   throw new BusinessException(EmBusinessError.SUPPLIER_NOT_EXIST);
+  }
+  return CommonReturnType.create(list);
+ }
+
+ /**
  * 查询所有供应商
  */
 @RequestMapping("selectSupplier")
@@ -117,12 +154,6 @@ public ModelAndView houseUI(){
  ModelAndView mv = new ModelAndView("house");
  List<WareHouseDO> list = wareHouseService.selectAll();
 
-/* for (HouseDO houseDO:list){
-  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-  System.out.println(sdf.format(houseDO.getUpDate()));
-  String sj = sdf.format(houseDO.getUpDate());
-  mv.addObject("sj",sj);
- }*/
 
 mv.addObject("houseList",list);
  return mv;
@@ -135,38 +166,10 @@ mv.addObject("houseList",list);
  public ModelAndView out(@RequestParam(value = "houseid")Integer cId, HttpServletRequest request){
  //按货物id查询仓库
  WareHouseDO wareHouseDO = wareHouseService.selectByPrimaryKey(cId);
- /*HouseDO houseDO = hourseService.selectByPrimaryKey(cId);
- CargoDO cargoDO =cargoService.selectByPrimaryKey(houseDO.getCId());
- System.out.println(cargoDO.toString());
- SupplierDO supplierDO = supplierService.selectByPrimaryKey(houseDO.getSId());
- request.getSession().setAttribute("houseid",cId);
- request.getSession().setAttribute("carName",cargoDO.getCargoName());
- request.getSession().setAttribute("supName",supplierDO.getSupplierName());*/
  ModelAndView mv  =new ModelAndView("out");
  mv.addObject("wareHouse",wareHouseDO);
  return mv;
 }
-
-/**
- * 出货生成订单
- */
-/*@ResponseBody
-@RequestMapping("outOrder")
-public String outOrder(@RequestBody OrderDO orderDO,HttpServletRequest request){
-
- //生成订单号
- String s = KeyUtil.genUniqueKey();
- orderDO.setOrderId(s);
- orderService.insertSelective(orderDO);
- request.getSession().setAttribute("order",orderDO);
-Integer cId =(Integer)request.getSession().getAttribute("houseid");
-  HouseDO wareHouseDO = new HouseDO();
- wareHouseDO.setState("已出库");
- wareHouseDO.setHouseId(cId);
- System.out.println(wareHouseDO.getState());
- //int i =HouseDO.updateByPrimaryKeySelective(wareHouseDO);
- return "success";
-}*/
 
  /**
   * 出货生成订单ex
@@ -194,38 +197,6 @@ public String outOrder(@RequestBody OrderDO order){
  return "success";
 }
 
- /**
-  * 出货生成订单max
-  * @param
-  * @param
-  * @return
-  */
- /*@ResponseBody
- @RequestMapping("outOrder")
- public String outOrder(@RequestBody Order order){
-  //生成订单号
-  System.out.println(order.toString());
-
-  *//*WareHouseDO wareHouseDO1 =wareHouseService.selectByPrimaryKey(wareHouseDO.getHouseId());
-  wareHouseDO1.setAmount(wareHouseDO1.getAmount()-wareHouseDO.getAmount());
-  if (wareHouseDO1.getAmount()<0){
-   wareHouseDO1.setState("缺货");
-   wareHouseService.updateByPrimaryKeySelective(wareHouseDO1);
-   return "fail";
-  }
-  String s = KeyUtil.genUniqueKey();
-  System.out.println(s);
-  Order order = new Order();
-  //设置订单号
-  order.setOrderId(s);
-  order.setCargoName(wareHouseDO.getcName());
-  order.setAmount(wareHouseDO.getAmount());
-  order.setCustomerName(wareHouseDO.getcName());
-  wareHouseService.updateByPrimaryKeySelective(wareHouseDO1);
-*//*
-
-  return "success";
- }*/
 
 /**
  * 跳转到订单
