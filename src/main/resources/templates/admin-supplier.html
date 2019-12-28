@@ -96,9 +96,9 @@
 
           <div class="layui-inline">
             <div class="layui-input-inline">
-              <input value="" placeholder="请输入零食名" class="layui-input search_input" type="text" id="selname">
+              <input value="" placeholder="请输入供应商关键字" class="layui-input search_input" type="text" id="selname">
             </div>
-            <a class="layui-btn search_btn" id="selectid" >查询</a>
+            <a class="layui-btn search_btn" id="selectName" >查询</a>
           </div><div class="layui-inline">
           <a class="layui-btn layui-btn-normal newsAdd_btn" id="select">查询所有</a>
         </div><!--
@@ -114,26 +114,25 @@
           <table class="layui-table">
             <colgroup>
               <col width="100">
-              <col width="13%">
+              <col width="15%">
+              <col width="9%">
+              <col width="15%">
+              <col width="18%">
+              <col width="9%">
               <col width="15%">
               <col width="20%">
-              <col width="7%">
-              <col width="7%">
-              <col width="7%">
-              <col width="7%">
             </colgroup>
             <thead>
             <tr>
               <th>
-                零食ID
+                客户ID
               </th>
-              <th>图片</th>
-              <th>零食名称</th>
-              <th>零食描述</th>
-              <th>重量(克)</th>
-              <th>进价</th>
-              <th>VIP价格</th>
-              <th>售价</th>
+              <th>客户名称</th>
+              <th>负责人</th>
+              <th>联系电话</th>
+              <th>地址</th>
+              <th>电子邮件</th>
+              <th>登记时间</th>
               <th>操作</th>
             </tr>
             </thead>
@@ -158,6 +157,7 @@
               <th>最后登录时间</th>
               <th>上次登录IP</th>
               <th>登录IP</th>
+              <th>IP所在位置</th>
             </tr>
             </thead>
             <tbody>
@@ -169,6 +169,7 @@
               <td>2016-12-19 14:26:03</td>
               <td>127.0.0.1</td>
               <td>127.0.0.1</td>
+              <td>Unknown</td>
             </tr>
             </tbody>
           </table>
@@ -194,10 +195,9 @@
       $("#select").on("click",function () {
         $.ajax({
           type:"POST",
-          //contentType:"application/x-www-form-urlencoded",
           contentType:"application/json;charsetset=UTF-8",
-          url:"cargo",
-         // xhrFields:{withCredentials:true},
+          url:"supplier",
+          // xhrFields:{withCredentials:true},
           success:function (data) {
             if(data.status=="success"){
               var htmlStr = "";
@@ -206,34 +206,32 @@
                 // console.log(persons.name.length);
                 htmlStr +=
                         `
-<tr>
-<td>${data.data[i].cargoId}</td>
-<td><img src="${data.data[i].cargoImgAdd}" style="width:160px;height:80px"></td>
-<td>${data.data[i].cargoName}</td>
-<td>${data.data[i].cargoDescription}</td>
-<td>${data.data[i].weight}</td>
-<td>${data.data[i].purchasingCost}</td>
-<td>${data.data[i].vipPrice}</td>
-<td>${data.data[i].retailPrice}</td>
-<td>
-<a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
+                      <tr>
+                      	 <td>${data.data[i].supplierId}</td>
+                         <td>${data.data[i].supplierName}</td>
+                         <td>${data.data[i].supplierPerson}</td>
+                         <td>${data.data[i].supplierTel}</td>
+                         <td>${data.data[i].supplierAddress}</td>
+                         <td>${data.data[i].supplierEmail}</td>
+                         <td>${data.data[i].supplierCreatedate}</td>
+                         <td>
+								<a class="layui-btn layui-btn-mini news_edit" id="edit"><i class="iconfont icon-edit"></i> 编辑</a>
 
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
-</td>
+								<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3" id="del"><i class="layui-icon"></i> 删除</a>
+							</td>
                       </tr>
                       `;
                 $(".news_content").html(htmlStr)
               }
 
-
             }
             else{
-              alert(data);
+              alert(data.data.errMsg);
               console.log(data);
             }
           },
           error:function (data) {
-            alert(data);
+            alert(data.data.errMsg);
             console.log("发送失败"+data);
           }
         });
@@ -245,21 +243,20 @@
   </script>
 
   <script type = "text/javascript">
-    //按名字查
+    //按姓名查询
     jQuery(document).ready(function () {
-      $("#selectid").on("click",function () {
+      $("#selectName").on("click",function () {
         var s = $("#selname").val();
         if (s==""){
           alert("请输入关键字");
           return;
         }
-        var obj = JSON.stringify({"cargoName":$("#selname").val()});
+        var obj = JSON.stringify({"supplierName":$("#selname").val()});
         $.ajax({
           type:"POST",
           data:obj,
           contentType:"application/json;charsetset=UTF-8",
-          url:"cargoid",
-          // xhrFields:{withCredentials:true},
+          url:"selectsupplierName",
           success:function (data) {
             if(data.status=="success"){
               var htmlStr = "";
@@ -268,25 +265,23 @@
                 // console.log(persons.name.length);
                 htmlStr +=
                         `
-<tr>
-<td>${data.data[i].cargoId}</td>
-<td><img src="${data.data[i].cargoImgAdd}" style="width:160px;height:80px"></td>
-<td>${data.data[i].cargoName}</td>
-<td>${data.data[i].cargoDescription}</td>
-<td>${data.data[i].weight}</td>
-<td>${data.data[i].purchasingCost}</td>
-<td>${data.data[i].vipPrice}</td>
-<td>${data.data[i].retailPrice}</td>
-<td>
-<a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
+                      <tr>
+                      	 <td>${data.data[i].supplierId}</td>
+                         <td>${data.data[i].supplierName}</td>
+                         <td>${data.data[i].supplierPerson}</td>
+                         <td>${data.data[i].supplierTel}</td>
+                         <td>${data.data[i].supplierAddress}</td>
+                         <td>${data.data[i].supplierEmail}</td>
+                         <td>${data.data[i].supplierCreatedate}</td>
+                         <td>
+								<a class="layui-btn layui-btn-mini news_edit" id="edit"><i class="iconfont icon-edit"></i> 编辑</a>
 
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
-</td>
+								<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3" id="del"><i class="layui-icon"></i> 删除</a>
+							</td>
                       </tr>
                       `;
                 $(".news_content").html(htmlStr)
               }
-
 
             }
             else{

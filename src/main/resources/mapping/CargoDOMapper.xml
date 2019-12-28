@@ -21,6 +21,13 @@
     where cargo_id = #{cargoId,jdbcType=INTEGER}
   </select>
 
+  <select id="selectName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cargo
+    where cargo_name like CONCAT ('%',#{cargoName,jdbcType=VARCHAR},'%')
+  </select>
+
   <select id="selectAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

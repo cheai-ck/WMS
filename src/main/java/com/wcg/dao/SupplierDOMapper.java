@@ -13,6 +13,8 @@ public interface SupplierDOMapper {
 
     List<SupplierDO> selectAll();
 
+    List<SupplierDO> selectName(String supplierName);
+
     SupplierDO selectByPrimaryKey(Integer supplierId);
 
     int updateByPrimaryKeySelective(SupplierDO record);

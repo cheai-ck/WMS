@@ -13,6 +13,8 @@ public interface CargoDOMapper {
 
     List<CargoDO> selectAll();
 
+    List<CargoDO> selectName(String cargoName);
+
     CargoDO selectByPrimaryKey(Integer cargoId);
 
     int updateByPrimaryKeySelective(CargoDO record);

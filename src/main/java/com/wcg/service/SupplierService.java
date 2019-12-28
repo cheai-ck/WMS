@@ -16,6 +16,8 @@ public interface SupplierService {
 
  List<SupplierDO> selectAll();
 
+ List<SupplierDO> selectName(String supplierName);
+
  int updateByPrimaryKeySelective(SupplierDO record);
 
  int updateByPrimaryKey(SupplierDO record);

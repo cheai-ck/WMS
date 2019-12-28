@@ -28,6 +28,11 @@ public class CargoServiceImpl implements CargoService {
  }
 
  @Override
+ public List<CargoDO> selectName(String caogoName) {
+  return cargoDOMapper.selectName(caogoName);
+ }
+
+ @Override
  public List<CargoDO> selectAll() {
   return cargoDOMapper.selectAll();
  }

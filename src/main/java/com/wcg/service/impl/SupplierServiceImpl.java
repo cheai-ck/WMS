@@ -40,6 +40,11 @@ public class SupplierServiceImpl implements SupplierService {
  }
 
  @Override
+ public List<SupplierDO> selectName(String supplierName) {
+  return supplierDOMapper.selectName(supplierName);
+ }
+
+ @Override
  public int updateByPrimaryKeySelective(SupplierDO record) {
   return 0;
  }

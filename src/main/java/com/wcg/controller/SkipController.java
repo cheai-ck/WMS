@@ -37,4 +37,7 @@ public class SkipController {
   return "admin-cargo";
  }
 
+ @RequestMapping("admin-supplier")
+ public String supplier(){return "admin-supplier";}
+
 }
