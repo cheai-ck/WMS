@@ -17,28 +17,28 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from cargo
+    from cargo_table
     where cargo_id = #{cargoId,jdbcType=INTEGER}
   </select>
 
   <select id="selectName" parameterType="java.lang.String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from cargo
+    from cargo_table
     where cargo_name like CONCAT ('%',#{cargoName,jdbcType=VARCHAR},'%')
   </select>
 
   <select id="selectAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from cargo
+    from cargo_table
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from cargo
+    delete from cargo_table
     where cargo_id = #{cargoId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.wcg.dataobject.CargoDO">
-    insert into cargo (cargo_id, cargo_name, cargo_description, 
+    insert into cargo_table (cargo_id, cargo_name, cargo_description,
       weight, purchasing_cost, vip_price, 
       retail_price,cargo_img_add)
     values (#{cargoId,jdbcType=INTEGER}, #{cargoName,jdbcType=VARCHAR}, #{cargoDescription,jdbcType=VARCHAR}, 
@@ -46,7 +46,7 @@
       #{retailPrice,jdbcType=DECIMAL},#{cargoImgAdd,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.wcg.dataobject.CargoDO">
-    insert into cargo
+    insert into cargo_table
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="cargoId != null">
         cargo_id,
@@ -101,7 +101,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.wcg.dataobject.CargoDO">
-    update cargo
+    update cargo_table
     <set>
       <if test="cargoName != null">
         cargo_name = #{cargoName,jdbcType=VARCHAR},
@@ -128,7 +128,7 @@
     where cargo_id = #{cargoId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wcg.dataobject.CargoDO">
-    update cargo
+    update cargo_table
     set cargo_name = #{cargoName,jdbcType=VARCHAR},
       cargo_description = #{cargoDescription,jdbcType=VARCHAR},
       weight = #{weight,jdbcType=INTEGER},

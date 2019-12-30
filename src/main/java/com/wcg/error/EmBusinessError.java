@@ -6,7 +6,10 @@ public enum EmBusinessError implements CommonError {
     USER_NOT_EXIST(20001, "用户不存在或密码有误"),
     UNKNOWN_ERROR(10002, "未知错误"),
     CARGO_NOT_EXIST(10005,"找不到货物"),
-    SUPPLIER_NOT_EXIST(10005,"找不到供应商");;
+    ORDER_NOT_EXIST(10007,"找不到订单"),
+    SUPPLIER_NOT_EXIST(10005,"找不到供应商"),
+    OUT_OF_STOCK(10006,"库存不足");
+
 
 
     private int errCode;

@@ -2,12 +2,13 @@ package com.wcg.dataobject;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CargoDO {
+public class CargoDO implements Serializable {
     private Integer cargoId;
 
     private String cargoName;

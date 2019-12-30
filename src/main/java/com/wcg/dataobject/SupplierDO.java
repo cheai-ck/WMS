@@ -2,12 +2,13 @@ package com.wcg.dataobject;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SupplierDO {
+public class SupplierDO implements Serializable {
     private Integer supplierId;
 
     private String supplierName;

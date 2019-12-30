@@ -2,12 +2,13 @@ package com.wcg.dataobject;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class WareHouseDO {
+public class WareHouseDO implements Serializable {
     private Integer houseId;
 
     private String cName;

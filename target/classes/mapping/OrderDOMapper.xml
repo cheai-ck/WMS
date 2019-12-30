@@ -25,6 +25,13 @@
     <include refid="Base_Column_List" />
     from order_wms
   </select>
+
+  <select id="selectName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from order_wms
+    where cargo_name like CONCAT ('%',#{cargoName,jdbcType=VARCHAR},'%')
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from order_wms
     where id = #{id,jdbcType=INTEGER}
