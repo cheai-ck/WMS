@@ -1,6 +1,7 @@
 package com.wcg.service;
 
 import com.wcg.dataobject.OrderDO;
+import com.wcg.dataobject.SupplierDO;
 
 import java.util.List;
 
@@ -18,4 +19,6 @@ public interface OrderService {
  int updateByPrimaryKeySelective(OrderDO record);
 
  int updateByPrimaryKey(OrderDO record);
+
+ List<SupplierDO> selectName(String cargoName);
 }

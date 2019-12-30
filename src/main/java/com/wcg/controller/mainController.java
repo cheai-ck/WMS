@@ -25,7 +25,8 @@ public class mainController extends BaseController {
 private OrderService orderService;
 @Autowired
 private WareHouseService wareHouseService;
-
+@Autowired
+private CustomerService customerService;
  /**
   * 查询所有商品
   * @return
@@ -70,15 +71,19 @@ private WareHouseService wareHouseService;
   return CommonReturnType.create(list);
  }
 
-
- /**
-  * 跳转到商品入库页面
-  * @return
-  */
- @RequestMapping("enterUI")
- public String enterUI(){
-  return "enter";
- }
+    /**
+     * 按名字查询
+     * @return
+     */
+    @RequestMapping("selectorderName")
+    public CommonReturnType orderName(@RequestBody JSONObject obj) throws BusinessException {
+        String cargoName =obj.getString("cargoName");
+        List<SupplierDO> list = orderService.selectName(cargoName);
+        if (list.size()==0){
+            throw new BusinessException(EmBusinessError.SUPPLIER_NOT_EXIST);
+        }
+        return CommonReturnType.create(list);
+    }
 
  /**
   * 商品入库
@@ -111,10 +116,10 @@ private WareHouseService wareHouseService;
  @RequestMapping("supplier")
  public CommonReturnType selectAll() throws BusinessException {
   List<SupplierDO> list = supplierService.selectAll();
- for (SupplierDO supplierDO:list){
+/* for (SupplierDO supplierDO:list){
 
  }
-  System.out.println(list);
+  System.out.println(list);*/
   if (list.size()==0){
    throw new BusinessException(EmBusinessError.SUPPLIER_NOT_EXIST);
   }
@@ -126,7 +131,7 @@ private WareHouseService wareHouseService;
  */
 @RequestMapping("selectSupplier")
 public ModelAndView selectSupplier(){
- ModelAndView mv = new ModelAndView("enter");
+ ModelAndView mv = new ModelAndView("admin-enter");
 List<SupplierDO> list = supplierService.selectAll();
 List<CargoDO> list1 = cargoService.selectAll();
 mv.addObject("supplierList",list);
@@ -138,12 +143,13 @@ mv.addObject("cargoList",list1);
   * 查询仓库
   * @return
   */
-
- public ModelAndView sr(){
-  ModelAndView mv = new ModelAndView("enter");
+ @RequestMapping("selecthouse")
+ public CommonReturnType sr() throws BusinessException {
   List<WareHouseDO> list = wareHouseService.selectAll();
-  mv.addObject("wareList",list);
-  return mv;
+  if (list.size()==0){
+   throw new BusinessException(EmBusinessError.CARGO_NOT_EXIST);
+  }
+  return CommonReturnType.create(list);
  }
 
 /**
@@ -153,8 +159,6 @@ mv.addObject("cargoList",list1);
 public ModelAndView houseUI(){
  ModelAndView mv = new ModelAndView("house");
  List<WareHouseDO> list = wareHouseService.selectAll();
-
-
 mv.addObject("houseList",list);
  return mv;
 }
@@ -162,12 +166,14 @@ mv.addObject("houseList",list);
 /**
  * 跳转出库页面
  */
-@RequestMapping("out")
+@RequestMapping(value = "out",method = RequestMethod.GET)
  public ModelAndView out(@RequestParam(value = "houseid")Integer cId, HttpServletRequest request){
  //按货物id查询仓库
  WareHouseDO wareHouseDO = wareHouseService.selectByPrimaryKey(cId);
- ModelAndView mv  =new ModelAndView("out");
+ List<CustomerDO> list = customerService.selectAll();
+ ModelAndView mv  =new ModelAndView("admin-out");
  mv.addObject("wareHouse",wareHouseDO);
+ mv.addObject("customerList",list);
  return mv;
 }
 
@@ -177,48 +183,38 @@ mv.addObject("houseList",list);
   * @param
   * @return
   */
- @ResponseBody
-@RequestMapping("outOrder")
-public String outOrder(@RequestBody OrderDO order){
-  //生成订单号
-  List<WareHouseDO> list = wareHouseService.selectcs(order.getCargoName(),order.getSupplier());
-  for (WareHouseDO wareHouseDO:list){
-   wareHouseDO.setAmount(wareHouseDO.getAmount()-order.getAmount());
-   if (wareHouseDO.getAmount()<0){
-    wareHouseDO.setState("缺货");
-    wareHouseService.updateByPrimaryKeySelective(wareHouseDO);
-    return "fail";
-   }
+@RequestMapping(value = "outOrder",method = RequestMethod.POST)
+public CommonReturnType outOrder(@RequestBody OrderDO order) throws BusinessException {
+ //生成订单号
+ List<WareHouseDO> list = wareHouseService.selectcs(order.getCargoName(),order.getSupplier());
+ for (WareHouseDO wareHouseDO:list){
+  wareHouseDO.setAmount(wareHouseDO.getAmount()-order.getAmount());
+  if (wareHouseDO.getAmount()<0){
+   throw new BusinessException(EmBusinessError.OUT_OF_STOCK);
+  }else if (wareHouseDO.getAmount()==0){
+   wareHouseDO.setState("缺货");
   }
-  String s = KeyUtil.genUniqueKey();
-  order.setOrderId(s);
-  System.out.println(order.toString());
-  orderService.insertSelective(order);
- return "success";
+  wareHouseService.updateByPrimaryKeySelective(wareHouseDO);
+ }
+ String s = KeyUtil.genUniqueKey();
+ order.setOrderId(s);
+ System.out.println(order.toString());
+ orderService.insertSelective(order);
+ return CommonReturnType.create("success");
 }
 
 
 /**
- * 跳转到订单
+ * 查询订单
  */
-@RequestMapping("order")
- public ModelAndView order(){
- ModelAndView mv = new ModelAndView("order");
+@RequestMapping(value = "order",method = RequestMethod.POST)
+ public CommonReturnType order() throws BusinessException {
  List<OrderDO> orderDO  = orderService.selectAll();
- mv.addObject("orderList",orderDO);
- return mv;
+ if (orderDO.size()==0){
+  throw new BusinessException(EmBusinessError.ORDER_NOT_EXIST);
+ }
+ return CommonReturnType.create(orderDO);
 }
-
-
-
-/**
- * 修改密码界面
- */
-@RequestMapping("admin-gallery")
-public String gallery(){
- return "admin-gallery";
-}
-
 
 
 }

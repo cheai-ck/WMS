@@ -2,6 +2,7 @@ package com.wcg.service.impl;
 
 import com.wcg.dao.OrderDOMapper;
 import com.wcg.dataobject.OrderDO;
+import com.wcg.dataobject.SupplierDO;
 import com.wcg.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,5 +45,10 @@ public class OrderServiceImpl implements OrderService {
  @Override
  public int updateByPrimaryKey(OrderDO record) {
   return 0;
+ }
+
+ @Override
+ public List<SupplierDO> selectName(String cargoName) {
+  return orderDOMapper.selectName(cargoName);
  }
 }

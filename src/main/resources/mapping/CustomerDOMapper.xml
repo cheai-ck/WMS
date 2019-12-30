@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcg.dao.CustomerDoMapper">
+        <resultMap id="BaseResultMap" type="com.wcg.dataobject.CustomerDO">
+                <id column="id" jdbcType="INTEGER" property="id"/>
+                <result column="c_name" jdbcType="VARCHAR" property="cName"/>
+                <result column="c_address" jdbcType="VARCHAR" property="cAddress"/>
+                <result column="c_telephone" jdbcType="VARCHAR" property="cTelephone"/>
+        </resultMap>
+        <sql id="Base_Column_List">
+             id,c_name,c_address,c_telephone
+        </sql>
+        <select id="selectAll" resultMap="BaseResultMap">
+                select
+                <include refid="Base_Column_List"/>
+                from customer
+        </select>
+        </mapper>

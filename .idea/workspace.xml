@@ -2,53 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="更新了">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/management.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/黑巧克力.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CustomerDoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/CustomerDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/CustomerDOMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/lpxp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-enter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-house.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management.sql" beforeDir="false" afterPath="$PROJECT_DIR$/management.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CargoDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CargoDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/SupplierDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/SupplierDOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/OrderDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/OrderDOMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/AdminDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/AdminDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/CargoDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/CargoDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/OrderDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/OrderDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/SupplierDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/SupplierDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/WareHouseDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/WareHouseDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/error/EmBusinessError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/error/EmBusinessError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/CargoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/CargoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/SupplierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CargoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CargoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/SupplierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/SupplierServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/util/DateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/CargoDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CargoDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/SupplierDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/SupplierDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/70%黑巧克力.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/OrderDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/OrderDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-help.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cargo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/enter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/out.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/CargoDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/CargoDOMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/SupplierDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/SupplierDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/OrderDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/OrderDOMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/AdminDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/AdminDO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/CargoDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/CargoDO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/OrderDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/OrderDO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/SupplierDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/SupplierDO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/WareHouseDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/WareHouseDO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/error/EmBusinessError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/error/EmBusinessError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/CargoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/CargoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/SupplierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/SupplierService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CargoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CargoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/SupplierServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/SupplierServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/util/DateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/OrderServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/CargoDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/CargoDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/SupplierDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/SupplierDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/70%黑巧克力.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/OrderDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/OrderDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-help.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cargo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/enter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/house.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/out.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +81,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
       </list>
@@ -67,7 +90,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,6 +108,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -104,6 +128,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSP" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\WMS\src\main\resources\static\assets\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\WMS\src\main\resources\templates" />
       <recent name="F:\management\WMS\src\main\resources\templates" />
@@ -197,6 +224,12 @@
       <workItem from="1577523568460" duration="410000" />
       <workItem from="1577524050082" duration="21000" />
       <workItem from="1577524824956" duration="1756000" />
+      <workItem from="1577668310150" duration="4153000" />
+      <workItem from="1577672648319" duration="1497000" />
+      <workItem from="1577674786256" duration="5213000" />
+      <workItem from="1577686359010" duration="4722000" />
+      <workItem from="1577691658110" duration="5780000" />
+      <workItem from="1577698014360" duration="535000" />
     </task>
     <task id="LOCAL-00001" summary="更新了一个方法inx">
       <created>1576318161033</created>
@@ -243,13 +276,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="2" />
+          <line>90</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="4" />
+          <line>80</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

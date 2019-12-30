@@ -31,7 +31,7 @@
             <property name="enableSubPackages" value="true"></property>
         </javaClientGenerator>
     <!-- 数据库表转化为实体类，可以写多个table一次转完，也可以运行一次后修改tableName domainObjectName继续运行Mybatis-generator-->
-        <table tableName="admin" domainObjectName="AdminDO"
+        <table tableName="customer" domainObjectName="customerDO"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
