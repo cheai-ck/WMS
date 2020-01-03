@@ -7,6 +7,7 @@ import com.wcg.response.CommonReturnType;
 import com.wcg.service.AdminService;
 import com.wcg.util.Md5;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class AdminController extends BaseController{
   * @throws BusinessException
   */
  @ResponseBody
- @RequestMapping(value = "/check",method = {RequestMethod.POST}, consumes = {"application/x-www-form-urlencoded"})
+ @RequestMapping(value = "/check",method = {RequestMethod.POST})
  public String check(@RequestParam(value = "managementUser") String managementUser,
                      @RequestParam(value = "managementPass") String managementPass,
                      @RequestParam(value = "code") String code, HttpServletRequest request) throws BusinessException {
@@ -43,7 +44,11 @@ public class AdminController extends BaseController{
      String md5Pass = Md5.md5(managementPass);
      Subject subject = SecurityUtils.getSubject();
      UsernamePasswordToken token = new UsernamePasswordToken(managementUser, md5Pass);
-     subject.login(token);
+     try{
+         subject.login(token);
+     }catch (UnknownAccountException e){
+         throw new BusinessException(EmBusinessError.USER_NOT_EXIST);
+     }
      //subject.getSession().setAttribute("admin",adminDO.getManagementUser());
      request.getSession().setAttribute("admin", (String) token.getPrincipal());
      return "success";

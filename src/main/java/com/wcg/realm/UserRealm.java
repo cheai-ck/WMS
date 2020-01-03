@@ -44,7 +44,8 @@ public class UserRealm extends AuthorizingRealm {
         String password = new String((char[])uptoken.getCredentials());
         AdminDO adminDO = adminService.selectLogin(username,password);
         if (adminDO==null){
-            throw new UnknownAccountException();
+            return null;
+            //throw new UnknownAccountException();
             //throw new BusinessException(EmBusinessError.USER_NOT_EXIST);
         }
         AuthenticationInfo info =new SimpleAuthenticationInfo(username,adminDO.getManagementPass(),getName());

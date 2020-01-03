@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/configuration/ShiroConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/realm/UserRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="更新了">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/脆冬枣.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/蛋白素肉.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/error/EmBusinessError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/error/EmBusinessError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-401.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/realm/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/realm/UserRealm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-enter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-enter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-house.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-house.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-out.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/error/EmBusinessError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/error/EmBusinessError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/realm/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/realm/UserRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-404.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-enter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-enter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-gallery.html" afterDir="false" />
@@ -42,33 +35,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +64,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -202,18 +179,6 @@
       <workItem from="1577523568460" duration="410000" />
       <workItem from="1577524050082" duration="21000" />
       <workItem from="1577524824956" duration="1756000" />
-      <workItem from="1577668310150" duration="4153000" />
-      <workItem from="1577672648319" duration="1497000" />
-      <workItem from="1577674786256" duration="5213000" />
-      <workItem from="1577686359010" duration="4722000" />
-      <workItem from="1577691658110" duration="5780000" />
-      <workItem from="1577698014360" duration="2155000" />
-      <workItem from="1577754151787" duration="1708000" />
-      <workItem from="1577782604669" duration="2426000" />
-      <workItem from="1577927398819" duration="6987000" />
-      <workItem from="1577936949907" duration="3879000" />
-      <workItem from="1578015046741" duration="198000" />
-      <workItem from="1578028717055" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="更新了一个方法inx">
       <created>1576318161033</created>
@@ -229,14 +194,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576323207662</updated>
     </task>
-    <task id="LOCAL-00003" summary="12.30">
-      <created>1577698872926</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1577698872926</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,26 +218,35 @@
     <MESSAGE value="更新了一个方法inx" />
     <MESSAGE value="添加了静态文件" />
     <MESSAGE value="更新了" />
-    <MESSAGE value="12.30" />
-    <option name="LAST_COMMIT_MESSAGE" value="12.30" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="4" />
+          <line>113</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="5" />
+          <line>65</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/AdminController.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="13" />
+          <line>45</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wcg/realm/UserRealm.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wcg/controller/AdminController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,7 +23,7 @@
  </script>
 
 </head>
-<body>
+<body onLoad="document.getElementById('getOtp').focus()">
 <div class="layui-canvs"></div>
 <div class="layui-layout layui-layout-login">
 	<h1>
@@ -65,15 +65,19 @@ $(function(){
 });
 jQuery(document).ready(function () {
     $("#getOtp").on("click",function () {
-    
-      if(username==null || username==""){
-          alert("不能为空");
-          return false;
+    var username = $("#username").val();
+    var password = $("#password").val();
+    var code =$("#code").val();
+      if(username==null || username=="" ||password==""){
+          alert("用户名或密码不能为空");
+          return;
+	  }
+      if (code==""){
+      	alert("验证码不能为空");
+      	return ;
 	  }
 		$.ajax({
 			type:"POST",
-			//contentType:"application/x-www-form-urlencoded",
-			//contentType:"application/json;charsetset=UTF-8",
 			url:"check",
 			data:{
 			    "managementUser":$("#username").val(),
@@ -87,10 +91,9 @@ jQuery(document).ready(function () {
 				    window.location.href="index";
             }
 				else{
-					/*if(data.status=="fail"){
+					if(data.status=="fail"){
 						 alert(data.data.errMsg);
-					}*/
-				   alert("用户名或密码不正确");
+					}
 				}
             },
 			error:function (data) {
@@ -101,5 +104,16 @@ jQuery(document).ready(function () {
     });
 });
 </script>
+
+
+<script language="javascript">
+	function onkeydown() {
+		if(event.keyCode == 13) {
+			document.getElementById("getOtp").click();
+			return false;
+		}
+	}
+</script>
+
 </body>
 </html>
