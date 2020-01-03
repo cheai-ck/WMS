@@ -80,17 +80,17 @@ jQuery(document).ready(function () {
 			   "managementPass":$("#password").val(),
 			   "code":$("#code").val(),
 			},
-            xhrFields:{withCredentials:true},
+            //xhrFields:{withCredentials:true},
 			success:function (data) {
 				 // window.location.href="index.html";
-				if(data.status=="success"){
+				if(data=="success"){
 				    window.location.href="index";
             }
 				else{
-					if(data.status=="fail"){
+					/*if(data.status=="fail"){
 						 alert(data.data.errMsg);
-					}
-				   
+					}*/
+				   alert("用户名或密码不正确");
 				}
             },
 			error:function (data) {

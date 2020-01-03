@@ -85,12 +85,6 @@ public class SkipController {
   return "admin-order";
  }
 
- /**
-  * 注销
-  */
- @RequestMapping(value = "logout")
- public String logout(){
-  return "login";
- }
+
 
 }
