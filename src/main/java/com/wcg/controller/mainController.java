@@ -198,7 +198,6 @@ public CommonReturnType outOrder(@RequestBody OrderDO order) throws BusinessExce
  }
  String s = KeyUtil.genUniqueKey();
  order.setOrderId(s);
- System.out.println(order.toString());
  orderService.insertSelective(order);
  return CommonReturnType.create("success");
 }
