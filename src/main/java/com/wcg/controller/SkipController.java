@@ -1,7 +1,11 @@
 package com.wcg.controller;
 
+import com.wcg.service.CargoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -9,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class SkipController {
+ @Autowired
+ private CargoService cargoService;
  /**
   * 跳转到index
   * @return
@@ -85,6 +91,15 @@ public class SkipController {
   return "admin-order";
  }
 
-
+ /**
+  * 删除货物信息
+  */
+ @RequestMapping(value = "delC",method = RequestMethod.GET)
+ public String delCargo(@RequestParam(value = "cargoId") Integer obj){
+  //Integer cargoId=obj.getInt("cargoId");
+  System.out.println(obj);
+  cargoService.deleteByPrimaryKey(obj);
+  return "admin-cargo";
+ }
 
 }

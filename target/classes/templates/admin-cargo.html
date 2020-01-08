@@ -232,7 +232,7 @@
 <td>
 <a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
 
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
 </td>
                       </tr>
                       `;
@@ -293,8 +293,7 @@
 <td>${data.data[i].retailPrice}</td>
 <td>
 <a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
-
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del"><i class="layui-icon"></i> 删除1</a>
 </td>
                       </tr>
                       `;
@@ -358,14 +357,15 @@
       });
     });
   </script>
+  <a href="#" onclick="">上一页</a>第<input type="text">页<a href="#" onclick="">下一页</a>
   <!-- content end -->
 
 </div>
 
-<footer>
+<!--<footer>
   <hr>
   <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
-</footer>
+</footer>-->
 
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>

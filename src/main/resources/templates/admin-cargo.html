@@ -57,7 +57,7 @@
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><span class="am-icon-file"></span> 我的面板<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav2" >
-          <li><a href="admin-user.html" class="am-cf"><span class="glyphicon glyphicon-user"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+          <li><a href="cargo-alter.html" class="am-cf"><span class="glyphicon glyphicon-user"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
           <li><a href="admin-gallery"><span class="glyphicon glyphicon-pencil"></span> 修改密码</a></li>
           <!-- <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
            <li><a href="admin-401.html"><span class="am-icon-bug"></span> 404</a></li>-->
@@ -232,7 +232,7 @@
 <td>
 <a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
 
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
 </td>
                       </tr>
                       `;
@@ -293,8 +293,7 @@
 <td>${data.data[i].retailPrice}</td>
 <td>
 <a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
-
-<a class="layui-btn layui-btn-danger layui-btn-mini news_del" data-id="3"><i class="layui-icon"></i> 删除</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del"><i class="layui-icon"></i> 删除1</a>
 </td>
                       </tr>
                       `;
@@ -358,6 +357,7 @@
       });
     });
   </script>
+  <a href="#" onclick="">上一页</a>第<input type="text">页<a href="#" onclick="">下一页</a>
   <!-- content end -->
 
 </div>

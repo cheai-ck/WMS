@@ -14,7 +14,7 @@ public class CargoServiceImpl implements CargoService {
  private CargoDOMapper cargoDOMapper;
  @Override
  public int deleteByPrimaryKey(Integer cargoId) {
-  return 0;
+  return cargoDOMapper.deleteByPrimaryKey(cargoId);
  }
 
  @Override
@@ -51,4 +51,6 @@ public class CargoServiceImpl implements CargoService {
  public int updateByPrimaryKey(CargoDO record) {
   return 0;
  }
+
+
 }

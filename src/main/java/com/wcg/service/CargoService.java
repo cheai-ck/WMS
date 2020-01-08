@@ -20,4 +20,6 @@ public interface CargoService {
  int updateByPrimaryKeySelective(CargoDO record);
 
  int updateByPrimaryKey(CargoDO record);
+
+
 }

@@ -25,11 +25,11 @@ public class BaseController {
    map.put("errCode", businessException.getErrCode());
    map.put("errMsg", businessException.getErrMsg());
   }
-//  else{
-//   throw new Exception();
+  else{
+   //throw new Exception();
 //  map.put("errCode", EmBusinessError.UNKNOWN_ERROR.getErrCode());
 //  map.put("errMsg",EmBusinessError.UNKNOWN_ERROR.getErrMsg());
-//  }
+  }
   return CommonReturnType.create(map, "fail");
  }
 }

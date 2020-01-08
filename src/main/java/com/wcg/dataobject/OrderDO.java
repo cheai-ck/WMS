@@ -3,13 +3,13 @@ package com.wcg.dataobject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class OrderDO implements Serializable {
     private Integer id;
 
@@ -22,7 +22,7 @@ public class OrderDO implements Serializable {
     private String supplier;
 
     private Integer amount;
-
+    //@JSONField(format = "yyyy-MM-dd")
     private Date createDate;
 
     public Integer getId() {

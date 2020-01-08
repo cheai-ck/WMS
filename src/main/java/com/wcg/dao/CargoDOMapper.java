@@ -20,4 +20,5 @@ public interface CargoDOMapper {
     int updateByPrimaryKeySelective(CargoDO record);
 
     int updateByPrimaryKey(CargoDO record);
+
 }

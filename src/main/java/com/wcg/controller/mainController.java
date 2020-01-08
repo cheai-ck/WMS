@@ -5,6 +5,7 @@ import com.wcg.error.BusinessException;
 import com.wcg.error.EmBusinessError;
 import com.wcg.response.CommonReturnType;
 import com.wcg.service.*;
+import com.wcg.util.DateUtil;
 import com.wcg.util.KeyUtil;
 
 import net.sf.json.JSONObject;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -212,8 +214,13 @@ public CommonReturnType outOrder(@RequestBody OrderDO order) throws BusinessExce
  if (orderDO.size()==0){
   throw new BusinessException(EmBusinessError.ORDER_NOT_EXIST);
  }
+// for (OrderDO orderDO1:orderDO){
+//
+//     orderDO1.setCreateDate(DateUtil.date(orderDO1.getCreateDate()));
+// }
  return CommonReturnType.create(orderDO);
 }
+
 
 
 }

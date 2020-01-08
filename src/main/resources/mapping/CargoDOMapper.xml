@@ -33,10 +33,12 @@
     <include refid="Base_Column_List"/>
     from cargo_table
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cargo_table
     where cargo_id = #{cargoId,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="com.wcg.dataobject.CargoDO">
     insert into cargo_table (cargo_id, cargo_name, cargo_description,
       weight, purchasing_cost, vip_price, 
