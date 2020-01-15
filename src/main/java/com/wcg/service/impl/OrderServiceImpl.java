@@ -4,13 +4,13 @@ import com.wcg.dao.OrderDOMapper;
 import com.wcg.dataobject.OrderDO;
 import com.wcg.dataobject.SupplierDO;
 import com.wcg.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
- @Autowired
+ @Resource
  private OrderDOMapper  orderDOMapper;
  @Override
  public int deleteByPrimaryKey(Integer id) {
@@ -50,5 +50,12 @@ public class OrderServiceImpl implements OrderService {
  @Override
  public List<SupplierDO> selectName(String cargoName) {
   return orderDOMapper.selectName(cargoName);
+ }
+
+ @Override
+ public List<OrderDO> selectPage(Integer num) {
+  int size = 10;
+  int start = size * (num - 1);
+  return orderDOMapper.selectPage(start, size);
  }
 }

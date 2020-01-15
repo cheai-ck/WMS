@@ -21,4 +21,7 @@ public interface OrderService {
  int updateByPrimaryKey(OrderDO record);
 
  List<SupplierDO> selectName(String cargoName);
+
+ List<OrderDO> selectPage(Integer num);
+
 }

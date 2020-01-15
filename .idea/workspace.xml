@@ -2,20 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acec969f-9c5b-4714-b2e0-f41a2fb81a07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cargo-alter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/PageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/wcg/DateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/SkipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/controller/mainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CargoDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CargoDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/OrderDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dataobject/OrderDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CustomerDoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/CustomerDoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/dao/OrderDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/dao/OrderDOMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/CargoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/CargoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CargoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CargoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/SupplierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/SupplierServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/WareHouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/service/impl/WareHouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wcg/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wcg/util/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/CargoDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CargoDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-401.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-401.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/OrderDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/OrderDOMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-cargo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-enter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-enter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-gallery.html" afterDir="false" />
@@ -24,16 +31,33 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-out.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin-supplier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cargo-alter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cargo-alter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/SkipController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/controller/mainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/CargoDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/CargoDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/CustomerDoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/CustomerDoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dao/OrderDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dao/OrderDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/OrderDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/dataobject/OrderDO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/CargoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/CargoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/AdminServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CargoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CargoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/SupplierServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/SupplierServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/WareHouseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wcg/service/impl/WareHouseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/CargoDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/CargoDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/OrderDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/OrderDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-401.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-401.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-cargo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-enter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-enter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-house.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-house.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-out.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-supplier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-supplier.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +65,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -105,7 +132,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSP" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -132,6 +159,37 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="DateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wcg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wcg" />
+      <option name="MAIN_CLASS_NAME" value="com.wcg.DateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateTest.time" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wcg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wcg" />
+      <option name="MAIN_CLASS_NAME" value="com.wcg.DateTest" />
+      <option name="METHOD_NAME" value="time" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WMS [mybatis-generator:generate]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -171,12 +229,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.DateTest.time" />
+      <item itemvalue="JUnit.DateTest" />
       <item itemvalue="Maven.WMS [mybatis-generator:generate]" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.DateTest.time" />
+        <item itemvalue="JUnit.DateTest" />
         <item itemvalue="Spring Boot.App" />
       </list>
     </recent_temporary>
@@ -213,6 +275,19 @@
       <workItem from="1578305356798" duration="101000" />
       <workItem from="1578359525749" duration="322000" />
       <workItem from="1578374618433" duration="7000" />
+      <workItem from="1578463895156" duration="158000" />
+      <workItem from="1578644959348" duration="893000" />
+      <workItem from="1578649074046" duration="87000" />
+      <workItem from="1578878336614" duration="317000" />
+      <workItem from="1578878774124" duration="2577000" />
+      <workItem from="1578881567988" duration="10703000" />
+      <workItem from="1578904859733" duration="11000" />
+      <workItem from="1578904889571" duration="891000" />
+      <workItem from="1578905912627" duration="114000" />
+      <workItem from="1578906180901" duration="16000" />
+      <workItem from="1578906220580" duration="3420000" />
+      <workItem from="1578964384175" duration="3376000" />
+      <workItem from="1578973523762" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="更新了一个方法inx">
       <created>1576318161033</created>
@@ -235,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578043955278</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <created>1578463998800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578463998800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +341,7 @@
     <MESSAGE value="更新了一个方法inx" />
     <MESSAGE value="添加了静态文件" />
     <MESSAGE value="更新了" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

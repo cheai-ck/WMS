@@ -6,11 +6,12 @@ import com.wcg.service.WareHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class WareHouseServiceImpl implements WareHouseService {
- @Autowired
+ @Resource
  private WareHouseDOMapper wareHouseDOMapper;
 
  @Override

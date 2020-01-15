@@ -6,17 +6,18 @@ import com.wcg.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 
 @Service
 public class SupplierServiceImpl implements SupplierService {
 
- @Autowired
+ @Resource
  private SupplierDOMapper supplierDOMapper;
 
  public int deleteByPrimaryKey(Integer supplierId) {
-  return 0;
+  return supplierDOMapper.deleteByPrimaryKey(supplierId);
  }
 
  @Override

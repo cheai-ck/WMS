@@ -57,7 +57,7 @@
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><span class="am-icon-file"></span> 我的面板<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav2" >
-          <li><a href="admin-user.html" class="am-cf"><span class="glyphicon glyphicon-user"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+          <li><a href="cargo-alter.html" class="am-cf"><span class="glyphicon glyphicon-user"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
           <li><a href="admin-gallery"><span class="glyphicon glyphicon-pencil"></span> 修改密码</a></li>
           <!-- <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
            <li><a href="admin-401.html"><span class="am-icon-bug"></span> 404</a></li>-->
@@ -78,7 +78,7 @@
 
 
       <li><a href="admin-cargo"><span class="glyphicon glyphicon-shopping-cart"></span> 货物信息</a></li>
-      <li><a href="admin-supplier"><span class="glyphicon glyphicon-user"></span> 客户信息</a></li>
+      <li><a href="admin-supplier"><span class="glyphicon glyphicon-user"></span> 供应商信息</a></li>
       <li><a href="orderUI"><span class="glyphicon glyphicon-list-alt"></span> 查看订单</a></li>
       <!--<li><a href="admin-house"><span class="glyphicon glyphicon-home"></span> 仓库信息</a></li>-->
 
@@ -186,6 +186,7 @@
             </tr>
             </tbody>
           </table>
+
           <div class="larry-table-page clearfix">
             <a href="javascript:;" class="layui-btn layui-btn-small"><i class="iconfont icon-shanchu1"></i>删除</a>
             <div id="page2" class="page"></div>
@@ -197,7 +198,6 @@
   </section>
 
   <script type="text/javascript" src="assets/js/newslist.js"></script>
-
   <script type="text/javascript" src="assets/common/layui/lay/dest/layui.all.js"></script>
   <script type="text/javascript" src="assets/js/login.js"></script>
   <script type="text/javascript" src="assets/jsplug/jparticle.jquery.js"></script>
@@ -293,7 +293,7 @@
 <td>${data.data[i].retailPrice}</td>
 <td>
 <a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
-<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del"><i class="layui-icon"></i> 删除1</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del"><i class="layui-icon"></i> 删除</a>
 </td>
                       </tr>
                       `;
@@ -336,14 +336,56 @@
           //得到了当前页，用于向服务端请求对应数据
           var curr = obj.curr;
           if(!first) {
-            //layer.msg('第 '+ obj.curr +' 页');
+            $.ajax({
+              type:"POST",
+              contentType:"application/json;charsetset=UTF-8",
+              url:"pageCargo/"+curr,
+              success:function (data) {
+                if(data.status=="success"){
+                  var htmlStr = "";
+                  for(var i=0;i<data.data.length;i++){
+                    console.log(data.data[i])
+                    // console.log(persons.name.length);
+                    htmlStr +=
+                            `
+<tr>
+<td>${data.data[i].cargoId}</td>
+<td><img src="${data.data[i].cargoImgAdd}" style="width:160px;height:80px"></td>
+<td>${data.data[i].cargoName}</td>
+<td>${data.data[i].cargoDescription}</td>
+<td>${data.data[i].weight}</td>
+<td>${data.data[i].purchasingCost}</td>
+<td>${data.data[i].vipPrice}</td>
+<td>${data.data[i].retailPrice}</td>
+<td>
+<a class="layui-btn layui-btn-mini news_edit"><i class="iconfont icon-edit"></i> 编辑</a>
+<a href="delC?cargoId=${data.data[i].cargoId}" class="layui-btn layui-btn-danger layui-btn-mini news_del"><i class="layui-icon"></i> 删除</a>
+</td>
+                      </tr>
+                      `;
+                    $(".news_content").html(htmlStr)
+                  }
+
+
+                }
+                else{
+                  alert(data.data.errMsg);
+                  console.log(data);
+                }
+              },
+              error:function (data) {
+                alert(data.data.errMsg);
+                console.log("发送失败"+data);
+              }
+            });
+
           }
         }
       });
 
       laypage({
         cont: 'page2',
-        pages: 10 //总页数
+        pages: 4 //总页数
         ,
         groups: 5 //连续显示分页数
         ,
@@ -351,15 +393,13 @@
           //得到了当前页，用于向服务端请求对应数据
           var curr = obj.curr;
           if(!first) {
+            alert(curr);
             //layer.msg('第 '+ obj.curr +' 页');
           }
         }
       });
     });
   </script>
-  <a href="#" onclick="">上一页</a>第<input type="text">页<a href="#" onclick="">下一页</a>
-  <!-- content end -->
-
 </div>
 
 <!--<footer>

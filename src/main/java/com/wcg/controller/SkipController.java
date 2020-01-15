@@ -1,12 +1,11 @@
 package com.wcg.controller;
 
 import com.wcg.service.CargoService;
+import com.wcg.service.OrderService;
+import com.wcg.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 页面跳转
@@ -15,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SkipController {
  @Autowired
  private CargoService cargoService;
+ @Autowired
+ private SupplierService supplierService;
  /**
   * 跳转到index
   * @return
@@ -96,10 +97,18 @@ public class SkipController {
   */
  @RequestMapping(value = "delC",method = RequestMethod.GET)
  public String delCargo(@RequestParam(value = "cargoId") Integer obj){
-  //Integer cargoId=obj.getInt("cargoId");
-  System.out.println(obj);
+
   cargoService.deleteByPrimaryKey(obj);
   return "admin-cargo";
  }
+
+    /**
+     * 删除供应商
+     */
+    @RequestMapping(value = "delS",method = RequestMethod.GET)
+    public String delSupplier(@RequestParam(value = "supplierId") Integer supplierId){
+        supplierService.deleteByPrimaryKey(supplierId);
+        return "admin-supplier";
+    }
 
 }

@@ -26,6 +26,13 @@
     from order_wms
   </select>
 
+  <select id="selectPage" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from order_wms
+    limit #{start,jdbcType=INTEGER},#{size,jdbcType=INTEGER}
+  </select>
+
   <select id="selectName" parameterType="java.lang.String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CustomerService {
     List<CustomerDO> selectAll();
+
+    int deleteByPrimaryKey(Integer supplier);
 }

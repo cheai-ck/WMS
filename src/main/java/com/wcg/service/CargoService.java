@@ -21,5 +21,7 @@ public interface CargoService {
 
  int updateByPrimaryKey(CargoDO record);
 
+ List<CargoDO> selectPage(Integer id);
+
 
 }

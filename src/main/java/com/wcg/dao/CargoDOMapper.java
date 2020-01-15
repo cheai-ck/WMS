@@ -21,4 +21,6 @@ public interface CargoDOMapper {
 
     int updateByPrimaryKey(CargoDO record);
 
+    List<CargoDO> selectPage(Integer start,Integer size);
+
 }
