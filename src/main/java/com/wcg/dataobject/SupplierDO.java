@@ -21,7 +21,7 @@ public class SupplierDO implements Serializable {
 
     private String supplierAddress;
 
-    private Date supplierCreatedate;
+    private String supplierCreatedate;
 
 
 }

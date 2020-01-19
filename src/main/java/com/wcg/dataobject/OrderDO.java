@@ -23,7 +23,7 @@ public class OrderDO implements Serializable {
 
     private Integer amount;
     //@JSONField(format = "yyyy-MM-dd")
-    private Date createDate;
+    private String createDate;
 
     public Integer getId() {
         return id;
@@ -73,11 +73,11 @@ public class OrderDO implements Serializable {
         this.amount = amount;
     }
 
-    public Date getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(String createDate) {
         this.createDate = createDate;
     }
 }

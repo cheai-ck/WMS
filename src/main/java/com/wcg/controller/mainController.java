@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -200,6 +201,8 @@ public CommonReturnType outOrder(@RequestBody OrderDO order) throws BusinessExce
  }
  String s = KeyUtil.genUniqueKey();
  order.setOrderId(s);
+ SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd HH:mm:dd") ;
+ order.setCreateDate(sm.format(new Date()));
  orderService.insertSelective(order);
  return CommonReturnType.create("success");
 }

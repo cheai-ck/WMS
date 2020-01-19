@@ -17,7 +17,7 @@ public class WareHouseDO implements Serializable {
 
     private Integer amount;
 
-    private Date upDate;
+    private String upDate;
 
     private String state;
 
@@ -53,11 +53,11 @@ public class WareHouseDO implements Serializable {
         this.amount = amount;
     }
 
-    public Date getUpDate() {
+    public String getUpDate() {
         return upDate;
     }
 
-    public void setUpDate(Date upDate) {
+    public void setUpDate(String upDate) {
         this.upDate = upDate;
     }
 
